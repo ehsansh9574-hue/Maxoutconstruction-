@@ -2,7 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
-html, body, #__next { height: 100%; }
-body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:#fafafa; color:#111827; }
-a { text-decoration: none; }
+/* Dark base */
+html { scroll-behavior: smooth; }
+body { margin:0; background:#000; color:#fff; font-family: ui-sans-serif, system-ui, Arial; }
+a { text-decoration:none; }
+
+/* Simple utilities */
+.container { max-width:1200px; margin:0 auto; padding:0 16px; }
+.btn{display:inline-block; padding:12px 20px; border-radius:12px; font-weight:800;}
+.btn-primary{ background:#0074FF; color:#fff; box-shadow:0 6px 24px rgba(0,116,255,.35); }
+.btn-outline{ border:1px solid #1f2937; color:#fff; background:transparent; }
+.card{ border:1px solid #1f2937; border-radius:16px; padding:20px; background:rgba(255,255,255,0.02); }
+
+/* HERO background motion & fade */
+@keyframes heroPan {
+  0%   { transform: scale(1.05) translateY(0); opacity:.85; }
+  50%  { transform: scale(1.12) translateY(-8px); opacity:.95; }
+  100% { transform: scale(1.08) translateY(6px); opacity:.9; }
+}
+.hero-bg{ 
+  background-image: url("/hero.jpg"); 
+  background-size: cover; 
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+  animation: heroPan 32s ease-in-out infinite alternate;
+}
+
+/* Blue/black gradient overlay */
+.hero-overlay{
+  background: radial-gradient(600px circle at 20% 10%, rgba(0,116,255,.25), transparent 40%),
+              radial-gradient(800px circle at 80% 30%, rgba(0,116,255,.15), transparent 45%),
+              linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.9));
+}
+
+/* subtle text fade-in */
+@keyframes fadeUp { from { opacity:0; transform: translateY(8px);} to { opacity:1; transform:none; } }
+.fade-up{ animation: fadeUp .9s ease forwards; }
