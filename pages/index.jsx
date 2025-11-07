@@ -1,36 +1,33 @@
 export default function Home() {
+  const features = [
+    ["Restoration & Reno", "Water/smoke damage, make-readies, kitchens, baths, basements, carpentry."],
+    ["Flooring", "Hardwood, vinyl, laminate, stairs. Real subfloor prep & moisture checks."],
+    ["Painting", "Interior/exterior, cabinet spraying, drywall repairs, crisp lines."],
+    ["Selective Demo", "Kitchen/bath tear-outs, flooring removal, non-structural walls."]
+  ];
+
   return (
-    <div style={{ 
-      display: "flex", 
-      flexDirection: "column", 
-      alignItems: "center", 
-      justifyContent: "center", 
-      minHeight: "100vh",
-      backgroundColor: "#0a0a0a",
-      color: "#fff",
-      fontFamily: "Arial, sans-serif"
-    }}>
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem", color: "#facc15" }}>
-        Welcome to MaxOut Construction
+    <section className="text-center py-16">
+      <h1 className="text-4xl md:text-5xl font-extrabold" style={{color:"#1C39BB"}}>
+        Ruggedly Reliable Renovations for Toronto & GTA
       </h1>
-      <p style={{ fontSize: "1.2rem", maxWidth: "600px", textAlign: "center" }}>
-        Toronto’s ruggedly reliable renovation team. <br />
-        Restoration • Flooring • Painting • Demolition
+      <p className="mt-4 text-lg text-zinc-600">
+        Restoration • Flooring • Painting • Selective Demolition
       </p>
-      <a 
-        href="mailto:info@maxoutconstruction.ca"
-        style={{
-          marginTop: "2rem",
-          backgroundColor: "#facc15",
-          color: "#000",
-          padding: "0.8rem 1.5rem",
-          borderRadius: "8px",
-          textDecoration: "none",
-          fontWeight: "bold"
-        }}
-      >
-        Get a Free Quote
-      </a>
-    </div>
+
+      <div className="mt-8 flex justify-center gap-4">
+        <a href="/contact" className="btn btn-primary">Get a Free Quote</a>
+        <a href="/services/restoration" className="btn btn-outline">See Services</a>
+      </div>
+
+      <div className="mt-14 grid md:grid-cols-4 gap-4 text-left">
+        {features.map(([t, d]) => (
+          <div className="card" key={t}>
+            <h3 className="font-semibold">{t}</h3>
+            <p className="mt-2 text-zinc-600 text-sm">{d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
