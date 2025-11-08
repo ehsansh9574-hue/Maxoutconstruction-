@@ -10,7 +10,7 @@ export default function Layout({ children }) {
           {/* Logo + Company Name */}
           <Link href="/" className="flex items-center gap-3">
             <img
-              src="/logo.png"
+              src="/logo.jpg"
               alt="MaxOut Construction"
               width={80}
               height={80}
