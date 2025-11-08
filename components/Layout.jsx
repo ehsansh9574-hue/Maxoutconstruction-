@@ -7,7 +7,7 @@ export default function Layout({ children }) {
       <header className="sticky top-0 z-30 bg-black/70 backdrop-blur border-b border-zinc-800">
         <nav className="max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="MaxOut logo" width={34} height={34} className="rounded" />
+            <img src="/logo.jpg" alt="MaxOut logo" width={34} height={34} className="rounded" />
             <span className="font-extrabold tracking-wide">MaxOut Construction</span>
           </Link>
 
