@@ -7,12 +7,12 @@ export default function Layout({ children }) {
       <header className="sticky top-0 z-30 bg-black/70 backdrop-blur border-b border-zinc-800">
         <nav className="max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo and Brand */}
-          <Link href="/" className="flex items-center gap-3" aria-label="MaxOut Construction home">
+          <Link href="/" className="flex items-center gap-3" aria-label="MaxOut Construction Home">
             <img
-              src="/logo-2025.png?v=1"
+              src="/maxoutlogo.png?v=1"
               alt="MaxOut Construction Logo"
-              width={48}
-              height={48}
+              width="48"
+              height="48"
               style={{
                 objectFit: "contain",
                 backgroundColor: "white",
@@ -31,10 +31,18 @@ export default function Layout({ children }) {
             <Link href="/services/renovation" className="hover:opacity-80">
               Renovation &amp; Restoration
             </Link>
-            <Link href="/services/flooring" className="hover:opacity-80">Flooring</Link>
-            <Link href="/services/painting" className="hover:opacity-80">Painting</Link>
-            <Link href="/services/bathrooms" className="hover:opacity-80">Bathrooms</Link>
-            <Link href="/services/kitchens" className="hover:opacity-80">Kitchens</Link>
+            <Link href="/services/flooring" className="hover:opacity-80">
+              Flooring
+            </Link>
+            <Link href="/services/painting" className="hover:opacity-80">
+              Painting
+            </Link>
+            <Link href="/services/bathrooms" className="hover:opacity-80">
+              Bathrooms
+            </Link>
+            <Link href="/services/kitchens" className="hover:opacity-80">
+              Kitchens
+            </Link>
             <Link
               href="/#quote"
               className="inline-block px-4 py-2 rounded-lg font-bold"
@@ -46,7 +54,7 @@ export default function Layout({ children }) {
         </nav>
       </header>
 
-      {/* Page Content */}
+      {/* Main Page Content */}
       <main>{children}</main>
 
       {/* Footer */}
@@ -54,8 +62,15 @@ export default function Layout({ children }) {
         <div className="max-w-[1200px] mx-auto px-4 py-10 text-sm text-zinc-300 grid gap-3 sm:flex sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} MaxOut Construction</div>
           <div className="flex items-center gap-4">
-            <a href="tel:16475301049" className="hover:text-white">647-530-1049</a>
-            <a href="mailto:info@maxoutconstruction.ca" className="hover:text-white">info@maxoutconstruction.ca</a>
+            <a href="tel:16475301049" className="hover:text-white">
+              647-530-1049
+            </a>
+            <a
+              href="mailto:info@maxoutconstruction.ca"
+              className="hover:text-white"
+            >
+              info@maxoutconstruction.ca
+            </a>
           </div>
         </div>
       </footer>
