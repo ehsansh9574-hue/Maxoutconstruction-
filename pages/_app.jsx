@@ -1,11 +1,7 @@
 // pages/_app.jsx
-import "../styles/globals.css"; // ok if this file doesn't exist
-import Layout from "../components/Layout";
+import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  // NO Layout here – header will only come from each page
+  return <Component {...pageProps} />;
 }
