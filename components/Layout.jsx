@@ -11,7 +11,7 @@ export default function Layout({ children }) {
           {/* Brand + (bulletproof) logo image */}
           <Link href="/" className="flex items-center gap-3" aria-label="MaxOut Construction home">
             <img
-              src="/maxoutlogo.png?v=2"      // <-- must match /public/maxoutlogo.png
+              src="/maxoutlogo.png"     // <-- must match /public/maxoutlogo.png
               alt="MaxOut Construction Logo"
               width="48"
               height="48"
